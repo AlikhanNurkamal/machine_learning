@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -28,6 +28,10 @@ print( accuracy )
 y_pred = model.predict( X_test )
 test_vs_pred = pd.DataFrame( { "True value" : y_test,
                                "Pred value" : y_pred } )
+
+accuracy1 = accuracy_score( y_test, y_pred )
+print( accuracy1 )
+
 print( test_vs_pred )
 
 print( model.predict( scaler.transform( [[30, 87000]] ) ) )
