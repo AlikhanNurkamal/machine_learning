@@ -26,13 +26,13 @@ accuracy = model.score( X_test, y_test )
 print( accuracy )
 
 y_pred = model.predict( X_test )
-test_vs_pred = pd.DataFrame( { "True value" : y_test,
-                               "Pred value" : y_pred } )
+# test_vs_pred = pd.DataFrame( { "True value" : y_test,
+#                                "Pred value" : y_pred } )
 
 accuracy1 = accuracy_score( y_test, y_pred )
 print( accuracy1 )
 
-print( test_vs_pred )
+# print( test_vs_pred )
 
 print( model.predict( scaler.transform( [[30, 87000]] ) ) )
 
