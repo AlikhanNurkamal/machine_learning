@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -30,3 +31,7 @@ plt.xlabel( "Predicted diagnosis" )
 plt.ylabel( "True diagnosis" )
 plt.savefig( "cancer_diagnosis_heatmap.png", dpi = 300 )
 plt.show( )
+
+# computing the accuracy with k-fold cross validation
+accuracies = cross_val_score( estimator = model, x = X, y = y, cv = 10 )
+
