@@ -33,5 +33,6 @@ plt.savefig( "cancer_diagnosis_heatmap.png", dpi = 300 )
 plt.show( )
 
 # computing the accuracy with k-fold cross validation
-accuracies = cross_val_score( estimator = model, x = X, y = y, cv = 10 )
+accuracies = cross_val_score( estimator = model, X = X, y = y, cv = 10 )
+print( "Average accuracy:", np.mean( accuracies) )
 
