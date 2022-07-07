@@ -67,7 +67,7 @@ def predict( x, theta, theta0 ):
 #
 # plt.scatter( X, y, marker = 'x', c = 'r')
 #
-# print( calculate_cost( X, y, theta_weights, theta_0 ) )
+# print( "Initial cost:", calculate_cost( X, y, theta_weights, theta_0 ) )
 # theta_0, theta_weights = gradient_descent( X, y, theta_weights, theta_0 )
 #
 # print( "\nParameters:" )
